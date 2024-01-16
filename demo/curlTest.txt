@@ -1,0 +1,8 @@
+curl -d '{"password":"chris1234}' -H "Content-Type: application/json"  http://localhost:8082/user/update
+curl -d '{"password":"chris"}' -H "Content-Type: application/json"  http://localhost:8082/user/update
+curl -d '{"password":"chr"}' -H "Content-Type: application/json"  http://localhost:8082/user/update
+curl -d '{"password":"chris123456789"}' -H "Content-Type: application/json"  http://localhost:8082/user/update
+curl -d '{"password":"Chris1234"}' -H "Content-Type: application/json"  http://localhost:8082/user/update
+curl -d '{"password":"chrischris1"}' -H "Content-Type: application/json"  http://localhost:8082/user/update
+curl -d '{"password":"chris12341234"}' -H "Content-Type: application/json"  http://localhost:8082/user/update
+
