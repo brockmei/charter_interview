@@ -1,0 +1,24 @@
+<ng-container *ngIf="data$ | async as data">
+    <div class="validate-page">
+        <div class="container page">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 col-xs-12">
+                    <div *ngIf="data.isSuccessfulValidation">SuccessfulValidation</div>
+                    <pw-validate-error-messages *ngIf="data.validationErrors" [errorMessages]="data.validationErrors"></pw-validate-error-messages>
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <fieldset class="form-group">
+                            <input
+                                type="pasword"
+                                class="form-control form-control-lg"
+                                placeholder="Password"
+                                formControlName="password"
+                                />
+                        </fieldset>
+                        <button  type="submit" class="btn btn-lg btn-primary pull-xs-right" [disabled]="data.isSubmitting">Check Password</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
